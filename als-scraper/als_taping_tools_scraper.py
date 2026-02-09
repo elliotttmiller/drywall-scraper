@@ -456,12 +456,12 @@ def main():
     print("=" * 80)
 
     # Prepare CSV writer and JSONL streaming file
+    # CSV columns reordered for developer-friendly import (no 'url' column)
     fieldnames = [
-        'name', 'sku', 'upc', 'mpn', 'brand', 'manufacturer', 'price', 'price_numeric',
-        'in_stock', 'category', 'description_short', 'description_full',
-        'url', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5',
-        'image_6', 'image_7', 'image_8', 'image_9', 'all_images',
-        'specifications_json'
+        'brand', 'name', 'description_full', 'sku', 'upc',
+        'price', 'price_numeric', 'description_short',
+        'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'image_8', 'image_9',
+        'all_images'
     ]
 
     # Open CSV and JSONL for streaming writes
@@ -502,21 +502,16 @@ def main():
             print(f"  ✓ Brand: {product['brand']}")
 
             # Build CSV row
+            # Build CSV row matching the new developer-friendly column order
             row = {
-                'name': product['name'],
-                'sku': product['sku'],
-                'upc': product['upc'],
-                'mpn': product['mpn'],
-                'brand': product['brand'],
-                'manufacturer': product['manufacturer'],
-                'price': product['price'],
-                'price_numeric': product['price_numeric'],
-                'in_stock': product['in_stock'],
-                'category': product['category'],
-                'description_short': product['description_short'],
-                'description_full': product['description_full'],
-                'url': product['url'],
-                'specifications_json': json.dumps(product['specifications']) if product['specifications'] else ''
+                'brand': product.get('brand', ''),
+                'name': product.get('name', ''),
+                'description_full': product.get('description_full', ''),
+                'sku': product.get('sku', ''),
+                'upc': product.get('upc', ''),
+                'price': product.get('price', ''),
+                'price_numeric': product.get('price_numeric', None),
+                'description_short': product.get('description_short', '')
             }
             for idx in range(9):
                 row[f'image_{idx+1}'] = product['images'][idx] if idx < len(product['images']) else ''
@@ -528,9 +523,16 @@ def main():
             except Exception as e:
                 print(f"  ⚠ Failed to write CSV row: {e}")
 
-            # Write JSONL line
+            # Write JSONL line (exclude url field for catalog portability)
             try:
-                jsonl_f.write(json.dumps(product, ensure_ascii=False) + '\n')
+                out_product = dict(product)
+                # Remove fields we don't want in exported catalog
+                out_product.pop('url', None)
+                out_product.pop('mpn', None)
+                out_product.pop('in_stock', None)
+                out_product.pop('specifications', None)
+                out_product.pop('category', None)
+                jsonl_f.write(json.dumps(out_product, ensure_ascii=False) + '\n')
                 flush_to_disk(jsonl_f)
             except Exception as e:
                 print(f"  ⚠ Failed to write JSONL: {e}")
