@@ -1,0 +1,227 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║          ALS TAPING TOOLS SCRAPER - QUICK START GUIDE                    ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+📦 WHAT YOU'LL GET:
+
+Every single product from https://www.alstapingtools.com with:
+  ✓ Product names
+  ✓ SKUs, UPCs, Part numbers
+  ✓ Prices (numeric + formatted)
+  ✓ Full descriptions
+  ✓ ALL product images (high-resolution)
+  ✓ Specifications
+  ✓ Brand/manufacturer info
+  ✓ Stock status
+  ✓ Product URLs
+
+═══════════════════════════════════════════════════════════════════════════
+
+⚡ 3 SIMPLE STEPS:
+
+1. INSTALL
+   ┌────────────────────────────────────────────────────────────────────┐
+   │ pip install requests beautifulsoup4 lxml                           │
+   └────────────────────────────────────────────────────────────────────┘
+
+2. RUN
+   ┌────────────────────────────────────────────────────────────────────┐
+   │ python3 als_taping_tools_scraper.py                                │
+   └────────────────────────────────────────────────────────────────────┘
+
+3. GET YOUR DATA
+   Files created:
+   📁 als_taping_tools_catalog.csv  (spreadsheet format)
+   📁 als_taping_tools_catalog.json (structured data)
+
+═══════════════════════════════════════════════════════════════════════════
+
+⏱️  WHAT TO EXPECT:
+
+Runtime:      1-3 hours (depending on product count)
+Products:     ~1,000-2,000 estimated
+Images:       3-9 per product (high-resolution)
+File Sizes:   CSV ~2-5 MB, JSON ~3-8 MB
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 OUTPUT FORMAT:
+
+CSV Columns:
+┌──────────────────┬─────────────────────────────────────────────────────┐
+│ name             │ Full product name                                   │
+│ sku              │ Product SKU/Part number                             │
+│ upc              │ UPC barcode                                         │
+│ mpn              │ Manufacturer part number                            │
+│ brand            │ Brand/manufacturer name                             │
+│ price            │ Formatted price (e.g., "$350.00")                   │
+│ price_numeric    │ Numeric price (e.g., 350.00)                        │
+│ in_stock         │ TRUE/FALSE stock status                             │
+│ category         │ Product category                                    │
+│ description_short│ Brief description                                   │
+│ description_full │ Complete product description                        │
+│ url              │ Direct product page link                            │
+│ image_1 to _9    │ Individual high-res image URLs                      │
+│ all_images       │ All images (pipe-separated)                         │
+│ specifications   │ JSON string of technical specs                      │
+└──────────────────┴─────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 LIVE PROGRESS UPDATES:
+
+While running, you'll see:
+
+[1/2] Collecting product URLs from all listing pages...
+  Page 1: https://www.alstapingtools.com/shop-by-product/...
+  ✓ Found 100 products (Total: 100)
+  
+  Page 2: https://www.alstapingtools.com/shop-by-product/?page=2...
+  ✓ Found 100 products (Total: 200)
+  
+  ✓ Reached last page
+✓ Total products to scrape: 1,234
+
+[2/2] Scraping detailed product information...
+
+[1/1234] Scraping: https://www.alstapingtools.com/product-name/
+  ✓ Name: 10" Easy Clean Standard Axle Flat Finishing Box
+  ✓ SKU: DM-10DMFF
+  ✓ Price: $350.00
+  ✓ Images: 9
+  ✓ Brand: Drywall Master Tools
+
+[2/1234] Scraping: https://www.alstapingtools.com/another-product/
+  ...
+
+═══════════════════════════════════════════════════════════════════════════
+
+✨ KEY FEATURES:
+
+✓ Complete Coverage
+  Automatically discovers ALL products across all pages
+
+✓ High-Resolution Images
+  Extracts 1280x1280px images, not thumbnails
+  Up to 9 images per product
+
+✓ Resume Capability
+  If interrupted, just run again - it resumes automatically
+  Progress saved after each product
+
+✓ Dual Output
+  CSV for Excel/Spreadsheets
+  JSON for APIs/Programming
+
+✓ Clean Data
+  Structured, formatted, ready to use
+  No HTML artifacts
+  Proper data types
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔧 CUSTOMIZATION (Optional):
+
+Edit als_taping_tools_scraper.py:
+
+# Scrape faster/slower
+DELAY = 2.0  # seconds between requests
+
+# Change output location
+OUTPUT_CSV = "/your/path/products.csv"
+OUTPUT_JSON = "/your/path/products.json"
+
+# Scrape specific category only
+START_URL = "https://www.alstapingtools.com/shop-by-product/automatic-taping-tools/?limit=100"
+
+═══════════════════════════════════════════════════════════════════════════
+
+🛑 IF SCRAPER STOPS:
+
+DON'T WORRY! It auto-saves progress.
+
+1. Just run the command again:
+   python3 als_taping_tools_scraper.py
+
+2. It will automatically skip completed products
+
+3. Continues from where it left off
+
+Progress file: als_scraper_progress.json
+
+═══════════════════════════════════════════════════════════════════════════
+
+💡 PRO TIPS:
+
+1. Run during off-peak hours for faster speeds
+
+2. Stable internet connection recommended
+
+3. Don't modify files while scraper is running
+
+4. Check progress file to see current status
+
+5. Output files update after each product
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 EXAMPLE OUTPUT:
+
+CSV Preview:
+name,sku,price,brand,in_stock,image_1
+"10"" Easy Clean Flat Box",DM-10DMFF,$350.00,Drywall Master,TRUE,https://...
+"12"" Easy Clean Flat Box",DM-12DMFF,$360.00,Drywall Master,TRUE,https://...
+"TapeTech Automatic Taper",07TT,$899.00,TapeTech,TRUE,https://...
+
+JSON Preview:
+[
+  {
+    "name": "10\" Easy Clean Standard Axle Flat Finishing Box",
+    "sku": "DM-10DMFF",
+    "price": "$350.00",
+    "price_numeric": 350.0,
+    "brand": "Drywall Master Tools",
+    "in_stock": true,
+    "images": [
+      "https://cdn11.bigcommerce.com/s-dbb3r9a7se/images/stencil/1280x1280/products/1968/6221/10__53717.1757516200.jpg",
+      "https://cdn11.bigcommerce.com/s-dbb3r9a7se/images/stencil/1280x1280/products/1968/6224/10_2__48954.1757516200.jpg",
+      ...
+    ],
+    "description_full": "Professional-Grade Design – Perfect for finishing coats...",
+    "specifications": {
+      "Parts Url": "https://www.alstapingtools.com/order-parts/...",
+      "Stand": "No"
+    }
+  },
+  ...
+]
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 YOU'RE READY!
+
+Just run:  python3 als_taping_tools_scraper.py
+
+The scraper will handle everything automatically.
+
+═══════════════════════════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING:
+
+Issue: "Module not found"
+Fix:   pip install requests beautifulsoup4 lxml
+
+Issue: "Network error"
+Fix:   Check internet connection, try again
+
+Issue: "No products found"
+Fix:   Website may be down, wait and retry
+
+Issue: Scraper stopped
+Fix:   Just run again, it will resume
+
+═══════════════════════════════════════════════════════════════════════════
+
+For complete documentation, see: ALS_README.md
+
+═══════════════════════════════════════════════════════════════════════════

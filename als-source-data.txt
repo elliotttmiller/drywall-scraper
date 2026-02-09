@@ -1,0 +1,72 @@
+===================== Product Description ===============================
+
+<div class="productView-description-tabContent is-open" id="ih__desc-1968">
+                    <p><strong>Professional-Grade Design</strong> – Perfect for finishing coats and achieving smooth, even seams on drywall and sheetrock.</p>
+<p><strong>Easy Clean System</strong> – Simple removable door and quick-flush design make cleanup faster and less messy at the end of the day.</p>
+<p><strong>Standard Compatibility</strong> – Works with all standard flat box handles, providing flexibility and ease of use for pros and crews. Also, created with standard parts for easy replacement of common wear parts.</p>
+<p><strong>Durable Tie Rod Construction</strong> – Built with Drywall Master’s original tie rod design, delivering unmatched strength and long service life.</p>
+<p><strong>Chicago Family-Owned Quality</strong> – Proud family owned in Chicago, IL, ensuring Midwest craftsmanship and reliability.<br><br><br><br><br>The <strong>Drywall Master Easy Clean Standard Axle Flat Finishing Box</strong> is the go-to tool for drywall professionals who need consistent, reliable performance. Designed for standard capacity, this box is ideal for applying finishing coats over taped joints, producing smooth, even seams on walls and ceilings. The <strong>Easy Clean system</strong> makes end-of-day cleanup quick and hassle-free, reducing downtime and keeping your tools in top condition. With Drywall Master’s <strong>original tie rod design</strong> and heavy-duty alloy construction, this finishing box is built to withstand the toughest job site conditions. Compatible with all standard flat box handles, it offers versatility and durability trusted by pros nationwide. </p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Extra Strong Stainless Tie Rods hold the body together</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Other Available Box Sizes</strong><strong><br></strong><span>5.5”, 7”, 10", 12” and 14”</span></p>
+                    <!-- snippet location product_description -->
+                </div>
+
+========================== PRICE =============================
+
+<div class="price-section price-section--withoutTax">
+            <span class="price-label">
+                
+            </span>
+            <span class="price-now-label" style="display: none;">
+                
+            </span>
+                <span data-product-price-without-tax="" class="price price--withoutTax price--main ">$350.00</span>
+        </div>
+
+========================== BRAND ==============================
+
+<h5 class="productView-brand">
+                                    <a href="https://www.alstapingtools.com/drywall-master-tools/">Drywall Master Tools</a>
+                                </h5>
+
+========================== IMAGE============================
+
+<div class="productView-titleWrapper">
+                                <h1 class="productView-title">10" Easy Clean Standard Axle Flat Finishing Box</h1>
+                                    <form action="https://www.alstapingtools.com/wishlist.php?action=add&amp;product_id=1968" class="form form-wishlist form-action" data-wishlist-add="" method="post">
+    <a href="#" aria-controls="wishlist-dropdown" aria-expanded="false" class="button dropdown-menu-button" data-dropdown="wishlist-dropdown" title="Add to Wish List">
+        <svg class="icon"><use xlink:href="#icon-heart"></use></svg>
+        <span class="is-srOnly">Add to Wish List</span>
+    </a>
+    <ul aria-hidden="true" class="dropdown-menu" data-dropdown-content="" id="wishlist-dropdown" tabindex="-1">
+        
+        <li>
+            <input class="button" type="submit" value="Add to My Wish List">
+        </li>
+        <li>
+            <a data-wishlist="" class="button" href="/wishlist.php?action=addwishlist&amp;product_id=1968">Create New Wish List</a>
+        </li>
+    </ul>
+</form>
+                            </div>
+
+======================= SKU & UPC ===============================
+
+<dl class="productView-info">
+                            <dt class="productView-info-name productView-info-name--sku sku-label">SKU:</dt>
+                            <dd class="productView-info-value productView-info-value--sku" data-product-sku="">DM-10DMFF</dd>
+                            <dt class="productView-info-name productView-info-name--upc upc-label">UPC:</dt>
+                            <dd class="productView-info-value productView-info-value--upc" data-product-upc="">716894769724</dd>
+                            <dt class="productView-info-name productView-info-name--mpn mpn-label" style="display: none;">MPN:</dt>
+                            <dd class="productView-info-value productView-info-value--mpn" data-product-mpn="" data-original-mpn=""></dd>
+                            <dt class="productView-info-name productView-info-name--stock  u-hiddenVisually">Current Stock:</dt>
+                            <dd class="productView-info-value productView-info-value--stock  u-hiddenVisually" data-product-stock=""></dd>
+
+                        </dl>
+
+
+
